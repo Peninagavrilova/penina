@@ -3,15 +3,15 @@
 
 
 function guess(){
-    true_ans=$(ls -l |grep "^-"|wc -l)
+    answer=$(ls -l |grep "^-"|wc -l)
     while true;
     do
         echo "Please enter your guess."
         read  number
-        if [ $number -lt $true_ans ]
+        if [ $number -lt $answer ]
         then
             echo "Your guess is less then the true number"
-        elif [ $number -gt $true_ans ]
+        elif [ $number -gt $answer ]
         then
             echo "Your guess is greater then the true number"
         else
